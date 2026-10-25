@@ -1,0 +1,4 @@
+// Shared build settings. Personal values (signing team, bundle id) go in
+// Local.xcconfig, which is git-ignored. Copy Local.xcconfig.example to start.
+JAM_BUNDLE_ID = com.jmeadicicco.jam
+#include? "Local.xcconfig"

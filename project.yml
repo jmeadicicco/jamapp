@@ -1,0 +1,33 @@
+name: Jam
+options:
+  bundleIdPrefix: com.jmeadicicco
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+configFiles:
+  Debug: Config/Base.xcconfig
+  Release: Config/Base.xcconfig
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_STYLE: Automatic
+targets:
+  Jam:
+    type: application
+    platform: iOS
+    sources:
+      - Jam
+    info:
+      path: Jam/Info.plist
+      properties:
+        CFBundleDisplayName: jam
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCalendarsFullAccessUsageDescription: jam reads your calendar to build your daily timeline.
+        NSRemindersFullAccessUsageDescription: jam reads your reminders to show what is due today.
+        NSContactsUsageDescription: jam reads your contacts to link people across events, reminders and mail.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(JAM_BUNDLE_ID)
+        TARGETED_DEVICE_FAMILY: "1"
